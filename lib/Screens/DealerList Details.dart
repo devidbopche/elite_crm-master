@@ -124,7 +124,6 @@ class _DealerDetailsState extends State<DealerDetails> {
 
 
       ),
-      drawer: show(),
       body: dealerProfile.isNotEmpty
           ? SingleChildScrollView(
         child: Padding(
