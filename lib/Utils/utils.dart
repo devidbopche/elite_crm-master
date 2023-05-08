@@ -27,6 +27,8 @@ class SizerUtil {
         ? mediumSize //'tablet'
         : largeSize; //'desktop';
   }
+
+  static void setScreenSize(BoxConstraints constraints, Orientation orientation) {}
 }
 
 /// Type of Device

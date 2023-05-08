@@ -1,13 +1,22 @@
 
 
 
+import 'package:flutter/material.dart';
+
+import '../Utils/app_baar.dart';
+
+import 'package:sizer/sizer.dart';
+
+import '../../Bloc/Login_Bloc/LoginState.dart';
+import '../../Utils/color_constants.dart';
+import '../../Utils/decoration_constants.dart';
+
+
 import 'dart:convert';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
-import '../Utils/app_baar.dart';
+
 import 'Homepage.dart';
 
 class DealerDetails extends StatefulWidget {
@@ -65,7 +74,43 @@ class _DealerDetailsState extends State<DealerDetails> {
 
 
       backgroundColor: Color.fromARGB(255, 132, 134, 134),
+      bottomNavigationBar: Row(
+          children: [
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DealerList()),
+                  );
+                },
+                child: Container(
+                  padding: EdgeInsets.all(15),
+                  width: 100.w,
+                  height: 5.8.h,
+                  color: ColorConstants.deppp,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // Text("Continue "),
+                      Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size:20.sp,
+                      ),
+                      Text( " Go Back", style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w900
+                      ),)
+                    ],
+                  ),
+                )),
 
+
+
+
+
+
+          ]),
       appBar: AppBar(
         title: Text('Dealer List'),
         actions: [
@@ -301,32 +346,7 @@ class _DealerDetailsState extends State<DealerDetails> {
               const SizedBox(
                 height: 30,
               ),
-              ElevatedButton(
-                onPressed: () {
 
-
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const DealerList()),
-                  );
-                },
-
-                style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        side:
-                        const BorderSide(width: 7, color: Colors.grey),
-                        borderRadius: BorderRadius.circular(16)),
-                    primary: Colors.deepOrangeAccent,
-                    padding:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 120)),
-                child: const Text(
-                  'Back',
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-              ),
             ],
           ),
         ),

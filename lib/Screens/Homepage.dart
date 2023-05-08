@@ -6,7 +6,16 @@ import 'package:shimmer/shimmer.dart';
 import '../Service/dealerList.dart';
 import '../Utils/app_baar.dart';
 import 'DealerList Details.dart';
-import '../Utils/size.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:sizer/sizer.dart';
+import '../../Bloc/Login_Bloc/LoginBloc.dart';
+import '../../Bloc/Login_Bloc/LoginEvent.dart';
+import '../../Bloc/Login_Bloc/LoginState.dart';
+import '../../Utils/color_constants.dart';
+import '../../Utils/decoration_constants.dart';
+
 import '../Utils/color_constants.dart';
 import '../Utils/text_page.dart';
 
@@ -42,13 +51,16 @@ class _DealerListState extends State<DealerList> {
           children: [
             InkWell(
                 onTap: () {
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DealerList()),
+                  );
                 },
                 child: Container(
                   padding: EdgeInsets.all(15),
-                  width: 165,
-                  height: 80,
-                  color: ColorConstants.appcolor,
+                  width: 33.w,
+                  height: 6.8.h,
+                  color: ColorConstants.deppp,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -68,8 +80,8 @@ class _DealerListState extends State<DealerList> {
                 },
                 child: Container(
                   padding: EdgeInsets.all(15),
-                  width: 165,
-                  height: 80,
+                  width: 33.w,
+                  height: 6.8.h,
                   color: ColorConstants.primaryColor,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -85,18 +97,18 @@ class _DealerListState extends State<DealerList> {
                 )),
 
             InkWell(
-                 onTap: () {
+                onTap: () {
 
-                 },
+                },
                 child: Container(
                   padding: EdgeInsets.all(15),
-                  width: 165,
-                  height: 80,
-                  color: ColorConstants.appcolor,
+                  width: 34.w,
+                  height: 6.8.h,
+                  color: ColorConstants.deppp,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                     // Text("Continue "),
+                      // Text("Continue "),
                       Icon(
                         Icons.add_circle_outline,
                         color: Colors.white,
@@ -116,6 +128,15 @@ class _DealerListState extends State<DealerList> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
           ),
+          IconButton(
+            icon: Icon(
+              Icons.notifications,
+              color: Colors.white,
+            ),
+            onPressed: () {
+
+            },
+          )
         ],
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 213, 85, 40),
