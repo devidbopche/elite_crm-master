@@ -213,70 +213,73 @@ class _DealerDetailsState extends State<DealerDetails> {
               const SizedBox(
                 height: 100,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    dealerProfile['name'] ?? ''
-                    ,style: const TextStyle(
-                      fontSize: 20.0,
-                      color:Colors.black,
-                      letterSpacing: 2.0,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      dealerProfile['name'] ?? ''
+                      ,style: const TextStyle(
+                        fontSize: 20.0,
+                        color:Colors.black,
+                        letterSpacing: 2.0,
 
-                      fontWeight: FontWeight.w800
-                  ),
-                  ),
-                  const SizedBox(
-                    height: 40,
-                  ),
-                  Text(
-                    dealerProfile['address'] ?? ''
-                    ,style: const TextStyle(
-                      fontSize: 20.0,
-                      fontStyle: FontStyle.italic,
-                      color:Colors.black,
+                        fontWeight: FontWeight.w800
+                    ),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Text(
+                      dealerProfile['address'] ?? ''
+                      ,style: const TextStyle(
+                        fontSize: 20.0,
+                        fontStyle: FontStyle.italic,
+                        color:Colors.black,
 
-                      fontWeight: FontWeight.w600
-                  ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    dealerProfile['city'] ?? ''
-                    ,style: const TextStyle(
-                      fontSize: 20.0,
-                      color:Colors.black,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w600
-                  ),
-                  ),
+                        fontWeight: FontWeight.w600
+                    ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      dealerProfile['city'] ?? ''
+                      ,style: const TextStyle(
+                        fontSize: 20.0,
+                        color:Colors.black,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w600
+                    ),
+                    ),
 
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    dealerProfile['state'] ?? ''
-                    ,style: const TextStyle(
-                      fontSize: 20.0,
-                      color:Colors.black,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w600
-                  ),
-                  ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      dealerProfile['state'] ?? ''
+                      ,style: const TextStyle(
+                        fontSize: 20.0,
+                        color:Colors.black,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w600
+                    ),
+                    ),
 
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    dealerProfile['direct'] ?? ''
-                    ,style: const TextStyle(
-                      fontSize: 20.0,
-                      color:Colors.black,
-                      fontStyle: FontStyle.italic,fontWeight: FontWeight.w600
-                  ),
-                  ),
-                ],
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      dealerProfile['direct'] ?? ''
+                      ,style: const TextStyle(
+                        fontSize: 20.0,
+                        color:Colors.black,
+                        fontStyle: FontStyle.italic,fontWeight: FontWeight.w600
+                    ),
+                    ),
+                  ],
+                ),
               ),
 
 

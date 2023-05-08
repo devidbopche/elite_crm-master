@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
     return BlocProvider(
         create: (context) => LoginBloc(),
     child: Scaffold(
-      appBar: AppBar(backgroundColor: ColorConstants.appcolor,),
+      appBar: AppBar(backgroundColor: ColorConstants.deppp),
       body: BlocConsumer<LoginBloc,LoginState>(
       listener: (context,state){
         if(state is LoginSuccessState){
@@ -92,12 +92,12 @@ class _LoginPageState extends State<LoginPage> {
          // width: 100.w,
          // decoration: DecorationConstants.decorationGradient,
          child: Padding(
-           padding: const EdgeInsets.only(top:150,right: 20,left: 20),
+           padding: const EdgeInsets.only(right: 20,left: 20),
            child: SingleChildScrollView(
              scrollDirection: Axis.vertical,
              child: Column(
                children: [
-
+                  SizedBox(height: 150,),
                  Padding(
                    padding: const EdgeInsets.all(10.0),
                    child: Image.asset('assets/images/logo.png'),
@@ -111,12 +111,12 @@ class _LoginPageState extends State<LoginPage> {
                          hintText: 'Username or UserID',
                          fillColor: Colors.white,
                          filled: true,
-                         focusedBorder: const OutlineInputBorder(
+                         focusedBorder:  OutlineInputBorder(
                            borderSide: BorderSide(
-                             color: Colors.deepOrange,style: BorderStyle.solid
+                             color:ColorConstants.deppp,style: BorderStyle.solid
                            )
                          ),
-                         suffixIcon: const Icon(Icons.person,color: Colors.deepOrange,),
+                         suffixIcon:  Icon(Icons.person,color: ColorConstants.deppp,),
                          border: OutlineInputBorder(
                              borderRadius: BorderRadius.circular(11))),
                    ),
@@ -132,9 +132,9 @@ class _LoginPageState extends State<LoginPage> {
                          hintText: 'Password',
                          fillColor: Colors.white,
                          filled: true,
-                         focusedBorder: const OutlineInputBorder(
+                         focusedBorder:  OutlineInputBorder(
                              borderSide: BorderSide(
-                                 color: Colors.deepOrange,style: BorderStyle.solid
+                                 color: ColorConstants.deppp,style: BorderStyle.solid
                              )
                          ),
                          suffixIcon: IconButton(
@@ -142,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                              _passwordVisible
                                  ? Icons.visibility
                                  : Icons.visibility_off,
-                             color: Colors.deepOrange,
+                             color:ColorConstants.deppp,
                            ),
                            onPressed: () {
                              setState(() {
@@ -158,7 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                  Row(
                    mainAxisAlignment: MainAxisAlignment.end,
                    children: const [
-                     Text('ForgetPassword?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)
+                     Text('ForgetPassword?',style: TextStyle(fontWeight: FontWeight.bold),)
                    ],
                  ), const SizedBox(height: 10,),
                  SizedBox(width: 350,height: 50,
@@ -212,7 +212,7 @@ class _LoginPageState extends State<LoginPage> {
 
                        }
                      },style: ElevatedButton.styleFrom(
-                         backgroundColor: ColorConstants.appcolor
+                         backgroundColor: ColorConstants.deppp
                      ), child: const Text('SignIn')))
                ],
              ),

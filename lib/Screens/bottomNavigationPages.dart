@@ -19,7 +19,7 @@ class _HomepageState extends State<Homepage> {
   var currentIndex = 0;
   List<Widget> pages = [   const DealerList() ,    const DealerList(),    const DealerList() ];
   List<IconData> listOfIcons = [
-    Icons.home_rounded,
+    Icons.person,
     Icons.list,
     Icons.add_circle,
   ];
