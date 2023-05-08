@@ -9,6 +9,7 @@ import '../../Bloc/Login_Bloc/LoginEvent.dart';
 import '../../Bloc/Login_Bloc/LoginState.dart';
 import '../../Utils/color_constants.dart';
 import '../../Utils/decoration_constants.dart';
+import '../bottomNavigationPages.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
       body: BlocConsumer<LoginBloc,LoginState>(
       listener: (context,state){
         if(state is LoginSuccessState){
-          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> const DealerList()), (route) => false);
+          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> const Homepage()), (route) => false);
         }else if(state is LoginErrorState){
 
             Fluttertoast.showToast(msg: 'Login Failed');
@@ -87,9 +88,9 @@ class _LoginPageState extends State<LoginPage> {
         }
       },builder: (context,state){
        return Container(
-         height: 100.h,
-         width: 100.w,
-         decoration: DecorationConstants.decorationGradient,
+         // height: 100.h,
+         // width: 100.w,
+         // decoration: DecorationConstants.decorationGradient,
          child: Padding(
            padding: const EdgeInsets.only(top:150,right: 20,left: 20),
            child: SingleChildScrollView(
@@ -157,7 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                  Row(
                    mainAxisAlignment: MainAxisAlignment.end,
                    children: const [
-                     Text('ForgetPassword?',style: TextStyle(fontWeight: FontWeight.bold),)
+                     Text('ForgetPassword?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)
                    ],
                  ), const SizedBox(height: 10,),
                  SizedBox(width: 350,height: 50,
