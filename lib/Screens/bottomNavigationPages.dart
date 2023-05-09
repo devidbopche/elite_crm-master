@@ -1,10 +1,10 @@
-// ignore_for_file: file_names
+
 
 import 'package:flutter/material.dart';
 
 import '../Utils/color_constants.dart';
 import 'Homepage.dart';
-
+import 'Existing_Leaad.dart';
 
 
 
@@ -17,7 +17,10 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   var currentIndex = 0;
-  List<Widget> pages = [   const DealerList() ,    const DealerList(),    const DealerList() ];
+  List<Widget> pages = [
+    const DealerList(),
+    const DealerList(),
+    const AddReport(),];
   List<IconData> listOfIcons = [
     Icons.person,
     Icons.list,
@@ -43,7 +46,7 @@ class _HomepageState extends State<Homepage> {
           borderRadius: BorderRadius.circular(50),
         ),
         child: ListView.builder(
-          itemCount: 3, // change to 3
+          itemCount: 3,
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.symmetric(horizontal: size.width * .024),
           itemBuilder: (context, index) => InkWell(
@@ -62,7 +65,7 @@ class _HomepageState extends State<Homepage> {
                   curve: Curves.fastLinearToSlowEaseIn,
                   margin: EdgeInsets.only(
                     bottom: index == currentIndex ? 0 : size.width * .029,
-                    right: index == 1 ? 0 : size.width * .0422, // adjust margin for 2 icons
+                    right: index == 1 ? 0 : size.width * .0422,
                     left: index == 1 ? 0 : size.width * .0422,
                   ),
                   width: size.width * .235,

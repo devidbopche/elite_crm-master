@@ -170,7 +170,7 @@ class _DealerDetailsState extends State<DealerDetails> {
           ]),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text('Dealer List'),
+        title: const Text('Dealer Profile'),
         actions: const [
 
           Padding(
@@ -192,7 +192,7 @@ class _DealerDetailsState extends State<DealerDetails> {
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: NetworkImage(
-                            "https://images.unsplash.com/photo-1557682260-96773eb01377?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80"
+                            "https://images.unsplash.com/photo-1550955295-77d6e18a24da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                         ),
                         fit: BoxFit.cover
                     )
@@ -202,7 +202,7 @@ class _DealerDetailsState extends State<DealerDetails> {
                   width: double.infinity,
                   height: 200,
                   child: Container(
-                    alignment: const Alignment(0.0,4.8),
+                    alignment: const Alignment(-0.9, 4.5),
                     child: CircleAvatar(
                       backgroundImage: NetworkImage(dealerProfile['logo']),
                       radius: 80.0,
@@ -210,13 +210,16 @@ class _DealerDetailsState extends State<DealerDetails> {
                   ),
                 ),
               ),
+
+
+
               const SizedBox(
                 height: 100,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
                       dealerProfile['name'] ?? ''
@@ -228,6 +231,14 @@ class _DealerDetailsState extends State<DealerDetails> {
                         fontWeight: FontWeight.w800
                     ),
                     ),
+
+                    const Divider(
+                      color: Colors.black,
+                      height: 25,
+                      thickness: 2,
+                      indent: 5,
+                      endIndent: 5,
+                    ),
                     const SizedBox(
                       height: 40,
                     ),
@@ -235,7 +246,7 @@ class _DealerDetailsState extends State<DealerDetails> {
                       dealerProfile['address'] ?? ''
                       ,style: const TextStyle(
                         fontSize: 20.0,
-                        fontStyle: FontStyle.italic,
+                        //
                         color:Colors.black,
 
                         fontWeight: FontWeight.w600
@@ -249,7 +260,7 @@ class _DealerDetailsState extends State<DealerDetails> {
                       ,style: const TextStyle(
                         fontSize: 20.0,
                         color:Colors.black,
-                        fontStyle: FontStyle.italic,
+
                         fontWeight: FontWeight.w600
                     ),
                     ),
@@ -262,7 +273,7 @@ class _DealerDetailsState extends State<DealerDetails> {
                       ,style: const TextStyle(
                         fontSize: 20.0,
                         color:Colors.black,
-                        fontStyle: FontStyle.italic,
+
                         fontWeight: FontWeight.w600
                     ),
                     ),
@@ -275,7 +286,7 @@ class _DealerDetailsState extends State<DealerDetails> {
                       ,style: const TextStyle(
                         fontSize: 20.0,
                         color:Colors.black,
-                        fontStyle: FontStyle.italic,fontWeight: FontWeight.w600
+                       fontWeight: FontWeight.w600
                     ),
                     ),
                   ],
@@ -303,11 +314,11 @@ class _DealerDetailsState extends State<DealerDetails> {
                         },
 
                         elevation: 2.0,
-                        fillColor: Colors.white,
+                        fillColor: Colors.blue,
                         padding: const EdgeInsets.all(18.0),
                         child:  Icon(
                           Icons.call,
-                          color: Colors.grey[600],
+                          color: Colors.black,
                           size: 28.0,
                         ),
                       )
@@ -333,11 +344,11 @@ class _DealerDetailsState extends State<DealerDetails> {
                         },
 
                         elevation: 2.0,
-                        fillColor: Colors.white,
+                        fillColor: Colors.blue,
                         padding: const EdgeInsets.all(18.0),
                         child:  Icon(
                           Icons.mail,
-                          color: Colors.grey[600],
+                          color: Colors.black,
                           size: 28.0,
                         ),
                       )
@@ -364,11 +375,11 @@ class _DealerDetailsState extends State<DealerDetails> {
                         },
 
                         elevation: 2.0,
-                        fillColor: Colors.white,
+                        fillColor: Colors.blue,
                         padding: const EdgeInsets.all(18.0),
                         child:  Icon(
                           Icons.message,
-                          color: Colors.grey[600],
+                          color: Colors.black,
                           size: 28.0,
                         ),
                       )
